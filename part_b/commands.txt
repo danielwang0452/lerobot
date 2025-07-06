@@ -1,0 +1,14 @@
+1. visualise dataset
+python -m lerobot.scripts.visualize_dataset     --repo-id lerobot/xarm_lift_medium     --episode-index 0
+
+
+2. train from scratch using scripts.train
+python -m lerobot.scripts.train \
+    --policy.type=diffusion \
+    --env.type=xarm \
+    --dataset.repo_id=lerobot/xarm_lift_medium \
+    --wandb.enable=true \
+    --output_dir=/Users/danielwang/LeRobot/lerobot/part_b/outputs/train/xarm3 \
+    --policy.device=mps \
+    --policy.push_to_hub=false \
+    --steps=5

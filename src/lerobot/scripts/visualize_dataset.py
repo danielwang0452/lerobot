@@ -32,6 +32,8 @@ Examples:
 local$ python -m lerobot.scripts.visualize_dataset \
     --repo-id lerobot/pusht \
     --episode-index 0
+     python -m lerobot.scripts.visualize_dataset     --repo-id lerobot/xarm_lift_medium_image     --episode-index 0
+
 ```
 
 - Visualize data stored on a distant machine with a local viewer:

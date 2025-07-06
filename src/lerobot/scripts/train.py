@@ -71,7 +71,6 @@ def update_policy(
         loss, output_dict = policy.forward(batch)
         # TODO(rcadene): policy.unnormalize_outputs(out_dict)
     grad_scaler.scale(loss).backward()
-
     # Unscale the gradient of the optimizer's assigned params in-place **prior to gradient clipping**.
     grad_scaler.unscale_(optimizer)
 
