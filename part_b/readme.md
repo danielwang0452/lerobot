@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-Part B
-
 1. Task & Dataset 
 
 Visualise dataset with
@@ -33,7 +30,7 @@ python -m lerobot.scripts.train \
 
 For this part I trained the diffusion policy for 10 000 steps (much fewer than
 the default 100 000) with evals every 1000 steps. 
-![Alt text](part_b/W&B Chart 08_07_2025, 17_26_35.png)
+![Alt text](W&B Chart 08_07_2025, 17_26_35.png)
 
 Although eval loss is not tracked, I think it would be best to track eval loss 
 as the policy is trained on the dataset (by splitting the dataset into
@@ -46,6 +43,4 @@ dataset well with low eval loss, then the issue is not with the model itself
 but possibly the expert demonstrations or environment 2) If the model performs poorly 
 and we see that it has overfitted the dataset
 with high eval loss, then we know this needs to be addressed first.
-=======
 
->>>>>>> origin/main
