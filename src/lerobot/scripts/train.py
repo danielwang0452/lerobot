@@ -207,7 +207,6 @@ def train(cfg: TrainPipelineConfig):
         for key in batch:
             if isinstance(batch[key], torch.Tensor):
                 batch[key] = batch[key].to(device, non_blocking=True)
-        print(batch['observation.image'].shape)
         train_tracker, output_dict = update_policy(
             train_tracker,
             policy,
