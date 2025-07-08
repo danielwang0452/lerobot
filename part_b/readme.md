@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Part B
 
 1. Task & Dataset 
@@ -46,3 +47,6 @@ dataset well with low eval loss, then the issue is not with the model itself
 but possibly the expert demonstrations or environment 2) If the model performs poorly 
 and we see that it has overfitted the dataset
 with high eval loss, then we know this needs to be addressed first.
+=======
+
+>>>>>>> origin/main
