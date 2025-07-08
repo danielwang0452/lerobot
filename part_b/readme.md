@@ -34,7 +34,6 @@ python -m lerobot.scripts.train \
 For this part I trained the diffusion policy for 10 000 steps (much fewer than
 the default 100 000) with evals every 1000 steps. 
 ![Alt text](part_b/W&B Chart 08_07_2025, 17_26_35.png)
-![Alt text](/Users/danielwang/LeRobot/lerobot/part_b/W&B Chart 08_07_2025, 17_26_35.png)
 
 Although eval loss is not tracked, I think it would be best to track eval loss 
 as the policy is trained on the dataset (by splitting the dataset into
