@@ -10,7 +10,7 @@ it above a certain height by controlling 4 paramters: [x, y, z] for the position
 end effector and [w] for the gripper. The observation space is the 4D vector representing the agent's state 
 and an 84 x 84 image. When I used the dataset visualisation tool, I found that, 
 surprisingly, the robot attained a low reward and failed the task in every episode that I checked.
-(see the recording). In practice, having some failure cases in the dataset can help
+(see the recording [Watch demo](dataset_viz.mp4)). In practice, having some failure cases in the dataset can help
 mitigate the distributional shift problem by essentially showing the policy how to correct
 its mistakes, but in this case I did not find a single successful trajectory. This means that performing imitation learning alone on this dataset 
 will not learn the task. However, since learning the task is not the focus of this exercise, I will proceed
@@ -29,11 +29,16 @@ python -m lerobot.scripts.train \
     --output_dir=part_b/outputs/train/xarm
 
 For this part I trained the diffusion policy for 10 000 steps (much fewer than
-the default 100 000) with evals every 1000 steps. 
+the default 100 000) with evals every 2000 steps. 
 ![Alt text](WB_1.png)
+The negative reward indicates that the policy has failed to learn the task, 
+which is expected given
+the expert demonstrations in the dataset also fail the task. 
+![Alt text](WB_2.png)
+The decrease in train loss shows that the policy is at least able to fit the dataset.
 
-Although eval loss is not tracked, I think it would be best to track eval loss 
-as the policy is trained on the dataset (by splitting the dataset into
+Although the eval loss is not tracked, I think it makes sense to also
+track eval loss  (by splitting the dataset into
 train/eval as we would do
 in traditional supervised learning, which imitation learning essentially is). 
 This way, we can make sure that the policy is not overfitting and we can 
