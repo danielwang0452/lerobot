@@ -1,3 +1,4 @@
+Here is my work for Part B.
 0. On mac, run export MUJOCO_GL=glfw 
 1. Task & Dataset 
 
